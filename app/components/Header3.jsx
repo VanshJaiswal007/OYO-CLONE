@@ -1,4 +1,7 @@
 "use-client"
+
+import Link from "next/link"
+
              
 const Header3 = () => {
   return (   
@@ -9,7 +12,9 @@ const Header3 = () => {
                   <input type="text" placeholder='Search...' className='h-16 outline-none px-3 text-lg border-r-2 border-gray-400 col-span-2'/>
                   <input type="text" placeholder='Search...' className='h-16 outline-none px-3 text-lg border-r-2 border-gray-400 col-span-1'/>
                   <input type="text" placeholder='Search...' className='h-16 outline-none px-3 text-lg border-r-2 border-gray-400 col-span-1'/>
+                  <Link href={'/hotels'}>
                   <button type='submit' className='h-16 px-3 py-2 col-span-1 bg-green-400 hover:bg-green-600 text-white text-xl'>Search</button>
+                  </Link>
               </div>
               <div className='flex mx-20 my-5'>
                  <button type='submit' className='h-16 px-3 py-2 col-span-1  hover:cursor-pointer text-white text-xl mr-5'>Continue your Search</  button>

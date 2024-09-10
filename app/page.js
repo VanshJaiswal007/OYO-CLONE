@@ -11,7 +11,6 @@ const Page = () => {
     <div>
       <head>
         <title>OYO : India's best online hotel Booking Site For Sanitized Stay</title>
-        <link rel='icon' href='/icon.png' />
       </head>
       <Header1 />
       <Header2 />
