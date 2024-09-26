@@ -48,7 +48,7 @@ const Login = () => {
         </div>
         <div className='flex justify-center items-center w-9/12'>
           <div className='text-white'>
-            <p className='font-bold text-5xl text-justify'>There's a smarter way to OYO around</p>
+            <p className='font-bold text-5xl text-justify'>Theres a smarter way to OYO around</p>
             <p className='text-2xl'>Sign up with your phone number and get exclusive access to discounts and savings on OYO stays and with our many travel partners .</p>
           </div>
           <div className='ml-20 w-10/12 border-2 h-104 text-justify bg-slate-50'>
