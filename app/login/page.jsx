@@ -37,9 +37,9 @@ const Login = () => {
 
   return (
     <div>
-      <head>
+      <Head>
         <title>OYO LOGIN</title>
-      </head>
+      </Head>
       <div className='flex h-screen justify-center items-center relative bg-login-background bg-no-repeat bg-cover opacity-85'>
         <div className='absolute top-10 px-20 flex items-center '>
           <h2 className='text-5xl font-bold mr-5 text-white'>OYO</h2>
