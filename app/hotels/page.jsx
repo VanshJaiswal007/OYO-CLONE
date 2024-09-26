@@ -50,9 +50,8 @@ const HotelsPage = () => {
       }
     };
 
-    if (city) {
       fetchHotels();
-    }
+    
   }, [city]);
 
   return (
