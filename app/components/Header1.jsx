@@ -1,13 +1,35 @@
 "use-client"
 import Image from 'next/image'
-import React from 'react'
 import Block from './Block'
 import Link from 'next/link'
+import Cookies from 'js-cookie'
+import { useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
 const Header1 = () => {
+   const [auth,setAuth] = useState(false);  
+   useEffect(()=>{
+     const key = Cookies.get("user");
+     if(key)
+     setAuth(true)
+    else{
+      setAuth(false);
+    }
+   },[])
+
+  const router = useRouter();
+
+  const handleLogout = () => {
+      setAuth(false);
+      Cookies.remove('user');  
+      router.push('/');
+  }
+
   return (
     <div className='flex justify-between border-b-2 border-gray-300 items-center px-10 h-24'>
+         <Link href={'/'}>
          <Image src={'/logo.png'} alt='logo' width={200} height={200} className='w-28 h-28'/>
+         </Link>
          <div className='border-r-2 border-r-gray-300 h-full flex'>
             <Block title={'Become a member'} para={'Additional 10% off on stays.'} />
             <Block title={'OYO for business'} para={'Trusted by 5000 corporates.'} />
@@ -15,9 +37,9 @@ const Header1 = () => {
             <Block title={'1234567890'} para={'Call us to book now.'} />
             <div className='flex items-center px-3'>
                <Image src={'/demo.png'} alt="demo" width={500} height={200} className='w-10 h-10 rounded-full mr-5'/>
-               <Link href={'/login'}>
+               {auth? (<h3 className='font-bold cursor-pointer' onClick={handleLogout}>Logout</h3>):(<Link href={'/login'}>
                <h3 className='font-bold'>Login/Signup</h3>
-               </Link>
+               </Link>)}
             </div>
          </div>
     </div>

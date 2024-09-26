@@ -9,14 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^1.7.7",
+    "bcrypt": "^5.1.1",
+    "js-cookie": "^3.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.6.1",
+    "next": "14.2.8",
+    "razorpay": "^2.9.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.8"
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "@types/node": "22.5.4",
+    "@types/react": "18.3.5",
+    "@types/shortid": "^0.0.32",
     "eslint": "^8",
-    "eslint-config-next": "14.2.8"
+    "eslint-config-next": "14.2.8",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
   }
 }

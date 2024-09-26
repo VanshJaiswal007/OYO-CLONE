@@ -1,17 +1,18 @@
-
+"use client"
 import Header1 from './components/Header1'
 import Header2 from './components/Header2'
 import Header3 from './components/Header3'
 import Image from 'next/image'
 import Header4 from './components/Header4'
 import Footer from './components/Footer'
+import Head from 'next/head'
 
 const Page = () => {
   return (
     <div>
-      <head>
+      <Head>
         <title>OYO : India's best online hotel Booking Site For Sanitized Stay</title>
-      </head>
+      </Head>
       <Header1 />
       <Header2 />
       <Header3 />
