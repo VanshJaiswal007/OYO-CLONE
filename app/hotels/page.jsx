@@ -26,14 +26,13 @@ const Page = () => {
      }
   }
   
-  const handleCheckList = async () => {
-     const {data}= await axios.get(`/api/search/find?val=${checkedList}`)
-     if(data.hotels){
-        setList(data.hotels);
-     }
-  }
-
   useEffect(()=>{
+    const handleCheckList = async () => {
+      const {data}= await axios.get(`/api/search/find?val=${checkedList}`)
+      if(data.hotels){
+         setList(data.hotels);
+      }
+   }
      if(checkedList){
       handleCheckList();
      }

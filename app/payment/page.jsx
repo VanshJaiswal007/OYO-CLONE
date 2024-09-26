@@ -9,29 +9,30 @@ const Page = () => {
 
    const searchParams = useSearchParams();
    const id = searchParams.get("id");
-  const makePayment = async () => {
-      const {data} = await axios.post(`/api/razorpay?id=${id}`);
-      console.log(data);
-      const options = {
-         key:process.env.RAZORPAY_KEY,
-         name:"Vansh",
-         currency:data.currency,
-         amount:data.amount,
-         order_id:data.id,
-         desciption:"Thank You",
-         handler:function(response){},
-         prefill:{
-            name:"Vansh",
-            email:"vanshjaiswalofficial7@gmail.com",
-            contact:9343504982,
-         }
-      }
-
-      const paymentObj = new window.Razorpay(options);
-      paymentObj.open();
-  }
+  
 
   useEffect(()=>{
+    const makePayment = async () => {
+        const {data} = await axios.post(`/api/razorpay?id=${id}`);
+        console.log(data);
+        const options = {
+           key:process.env.RAZORPAY_KEY,
+           name:"Vansh",
+           currency:data.currency,
+           amount:data.amount,
+           order_id:data.id,
+           desciption:"Thank You",
+           handler:function(response){},
+           prefill:{
+              name:"Vansh",
+              email:"vanshjaiswalofficial7@gmail.com",
+              contact:9343504982,
+           }
+        }
+  
+        const paymentObj = new window.Razorpay(options);
+        paymentObj.open();
+    }
       makePayment();
   },[])
 
