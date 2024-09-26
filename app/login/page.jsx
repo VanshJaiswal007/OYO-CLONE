@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation';
+import Head from 'next/head';
 
 
 const Login = () => {
