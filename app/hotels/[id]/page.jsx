@@ -7,7 +7,7 @@ import Cookies from "js-cookie"
 import Link from "next/link";
 
 
-const page = () => {
+const Page = () => {
   const [auth,setAuth] = useState(false);
   useEffect(()=>{
     const cookie = Cookies.get("user");
@@ -58,7 +58,7 @@ const page = () => {
                                 <li key={ele.name} className="mr-10 mb-3">
                                          <li className="flex items-center">
                                             <span>
-                                                <Image src={ele.img} width={200} height={200} className="w-8 h-8 rounded-full"/>
+                                                <Image src={ele.img} alt="e" width={200} height={200} className="w-8 h-8 rounded-full"/>
                                             </span>
                                             <span className="ml-5">{ele.name}</span></li>
                                         </li>
@@ -78,4 +78,4 @@ const page = () => {
 }
 
 
-export default page
+export default Page

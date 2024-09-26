@@ -37,7 +37,7 @@ const Page = () => {
      if(checkedList){
       handleCheckList();
      }
-  },[checkedList])
+  },[])
 
   useEffect(() => {
     const fetchHotels = async () => {

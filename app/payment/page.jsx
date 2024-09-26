@@ -5,7 +5,7 @@ import Script from "next/script"
 import Razorpay from "razorpay"
 import { useEffect } from "react"
 
-const page = () => {
+const Page = () => {
 
    const searchParams = useSearchParams();
    const id = searchParams.get("id");
@@ -29,7 +29,6 @@ const page = () => {
 
       const paymentObj = new window.Razorpay(options);
       paymentObj.open();
-
   }
 
   useEffect(()=>{
@@ -43,4 +42,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
