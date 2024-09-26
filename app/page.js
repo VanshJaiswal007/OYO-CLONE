@@ -11,7 +11,7 @@ const Page = () => {
   return (
     <div>
       <Head>
-        <title>OYO : India's best online hotel Booking Site For Sanitized Stay</title>
+        <title>OYO India best online hotel Booking Site For Sanitized Stay</title>
       </Head>
       <Header1 />
       <Header2 />

@@ -38,7 +38,7 @@ const Login = () => {
   return (
     <div>
       <head>
-        <title>OYO - LOGIN</title>
+        <title>OYO LOGIN</title>
       </head>
       <div className='flex h-screen justify-center items-center relative bg-login-background bg-no-repeat bg-cover opacity-85'>
         <div className='absolute top-10 px-20 flex items-center '>

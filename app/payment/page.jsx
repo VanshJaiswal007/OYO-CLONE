@@ -34,7 +34,7 @@ const Page = () => {
         paymentObj.open();
     }
       makePayment();
-  },[])
+  },[id])
 
   return (
        <>
